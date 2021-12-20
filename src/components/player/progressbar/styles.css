@@ -1,0 +1,12 @@
+.progressbar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-left: 10px;
+}
+
+input[type="range"] {
+  width: 125px;
+  cursor: pointer;
+}

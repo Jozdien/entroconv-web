@@ -1,0 +1,12 @@
+.download-container {
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.download-button {
+  color: #E0E0E0;
+}
+
+.download-button:hover {
+  color: #C0C0C0;
+}

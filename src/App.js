@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import Uploader from './components/uploader/index.js';
+import Transcript from './components/transcript/index.js';
+
 function App() {
+  const [audio, setAudio] = React.useState(null);
+  const [transcript, setTranscript] = React.useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div className="body">
+        <div className="audio">
+          <Uploader setAudio={setAudio}/>
+        </div>
+        <div className="output">
+          <Transcript transcript={transcript}/>
+        </div>
+      </div>
     </div>
   );
 }
