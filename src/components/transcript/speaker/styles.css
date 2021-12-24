@@ -1,0 +1,25 @@
+.speaker-container {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 20px;
+}
+
+.speaker-name {
+  flex: 1;
+
+  font-size: 18px;
+}
+
+.speaker-text {
+  flex: 5;
+}
+
+@media only screen and (max-width: 900px) {
+  .speaker-container {
+    flex-direction: column;
+  }
+  .speaker-name {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,17 @@
+.sentence-container {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 10px;
+}
+
+.sentence-text {
+  flex: 6;
+}
+
+.sentence-entropy {
+  flex: 1;
+  text-align: right;
+
+  color: #808080;
+}

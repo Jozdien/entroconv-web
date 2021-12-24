@@ -12,15 +12,34 @@
   justify-content: center;
 }
 
-.output {
-  display: flex;
-  flex-direction: column;
+.audio {
+  flex: 1;
 
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.output {
+  flex: 4;
+  width: 100%;
+  background-color: #F0F0F0;
+
+  display: flex;
+  justify-content: center;
 }
 
 .output::-webkit-scrollbar {
   display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .audio {
+    flex-direction: column;
+    margin-top: 15%;
+    margin-bottom: 10%;
+  }
+  .output {
+    height: 70vh;
+  }
 }
