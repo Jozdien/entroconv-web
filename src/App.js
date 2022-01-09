@@ -28,6 +28,11 @@ function App() {
   return (
     <div className="main">
       <div className="body">
+        {
+          audio == null ? 
+            <div className="buffer"/>
+          : null
+        }
         <div className="audio">
           <div className="upload-params">
             <Uploader setAudio={setAudio} numSpeakers={numSpeakers} segLen={segLen} senLen={senLen} setTranscript={setTranscript}/>
@@ -38,10 +43,14 @@ function App() {
           }
         </div>
         {
-          audio == null ? null :
-          <div className="output">
-            <Transcript transcript={transcript}/>
-          </div>
+          audio == null ? 
+            <div className="upload-tip">
+              Tip: Set the number of speakers in the parameters box!
+            </div>
+         :
+            <div className="output">
+              <Transcript transcript={transcript}/>
+            </div>
         }
       </div>
       <ParamsModal

@@ -34,7 +34,7 @@ function ParamsModal(props) {
             <Form.Label>Length of segments to split audio into</Form.Label>
             <Form.Control 
               type="number" 
-              placeholder="150" 
+              placeholder="Default: 150" 
               onChange={(e) => 
                 props.setseglen(e.target.value)
               }
@@ -44,7 +44,7 @@ function ParamsModal(props) {
             <Form.Label>Number of words to average entropy over</Form.Label>
             <Form.Control 
               type="number" 
-              placeholder="10" 
+              placeholder="Default: 10" 
               onChange={(e) => 
                 props.setsenlen(e.target.value)
               }

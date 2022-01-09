@@ -13,7 +13,7 @@ function Button(props) {
   else if(props.type == "parameters") {
     return(
       <div className="params-container" onClick={props.onClick} disabled={props.disabled}>
-        <img src={props.icon} alt="Settings" width="25" height="25"/>
+        <img src={props.icon} alt="Settings" width="24" height="24"/>
       </div>
     );
   }
