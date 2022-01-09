@@ -12,7 +12,7 @@ function Sentence(props) {
         {text}
       </div>
       <div className="sentence-entropy">
-        {entropy}
+        {entropy.toFixed(3)}
       </div>
     </div>
   );

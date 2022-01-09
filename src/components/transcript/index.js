@@ -1,6 +1,7 @@
 import './styles.css';
 
-import Speaker from './speaker/index.js';
+import Segment from './segment/index.js';
+
 
 function Transcript(props) {
   var transcript = props.transcript;
@@ -21,10 +22,10 @@ function Transcript(props) {
           Annotated Transcript
         </div>
       </div>
-      <div className="text-container">
+      <div className="segments-container">
         {
           transcript.map((item, index) => 
-            <Speaker speaker={item[0]} speech={item[1]} colour={colours[item[0]]}/>
+            <Segment segment={item} count={index} key={index}/>
           )
         }
       </div>

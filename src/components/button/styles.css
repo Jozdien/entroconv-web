@@ -4,13 +4,13 @@ div[disabled]
   opacity: 0.7;
 }
 
-.button-container {
+.uploader-container {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 
-  width: 250px;
+  width: 200px;
   height: 50px;
 
   border-color: #F0F0F0;
@@ -19,26 +19,68 @@ div[disabled]
   border-style: solid;
 }
 
-.button-container:hover {
+.uploader-container:hover {
   border-color: #A0A0A0;
 }
 
-.button-text {
+.uploader-text {
   font-size: 22px;
   color: #F0F0F0;
 }
 
+.params-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  width: 50px;
+  height: 50px;
+
+  border-color: #F0F0F0;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+.params-container:hover {
+  border-color: #A0A0A0;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  width: 100px;
+  height: 40px;
+  background-color: #404040;
+  border-radius: 4px;
+}
+
+.modal-hover :hover {
+  background-color: #202020;
+}
+
+.modal-text {
+  font-size: 16px;
+  color: #F0F0F0;
+  text-align: center;
+}
+
 @media only screen and (max-width: 900px) {
-  .button-container {
+  .uploader-container {
     width: calc(125px + 15vw);
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .button-container {
+  .uploader-container {
     width: 125px;
   }
-  .button-text {
+  .uploader-text {
     font-size: 18px;
   }
 }

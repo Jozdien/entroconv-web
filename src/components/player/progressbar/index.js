@@ -71,7 +71,7 @@ function ProgressBar(props) {
   
   return(
     <div className="progressbar-container">
-      <input type="range" id={progressId} value={progress} max="1" className="progressbar"></input>
+      <input type="range" id={progressId} value={progress} max="1" className="progressbar" readOnly></input>
     </div>
   );
 }

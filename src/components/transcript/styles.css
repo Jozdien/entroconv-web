@@ -1,6 +1,8 @@
 .transcript-container {
   display: flex;
   flex-direction: column;
+
+  max-height: 80vh;
   width: 70%;
 }
 
@@ -22,7 +24,7 @@
   flex: 1;
 }
 
-.text-container {
+.segments-container {
   flex: 9;
 
   overflow-y: scroll;
@@ -30,7 +32,7 @@
   scrollbar-width: none;
 }
 
-.text-container::-webkit-scrollbar {
+.segments-container::-webkit-scrollbar {
   display: none;
 }
 

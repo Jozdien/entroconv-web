@@ -17,7 +17,7 @@ function Speaker(props) {
       <div className="speaker-text">
         {
           speech.map((item, index) => 
-            <Sentence text={item[0]} entropy={item[1]}/>
+            <Sentence text={item[0]} entropy={item[1]} key={index}/>
           )
         }
       </div>

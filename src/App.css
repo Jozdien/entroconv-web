@@ -1,5 +1,6 @@
 .main {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: #101010;
 }
 
@@ -20,6 +21,11 @@
   justify-content: center;
 }
 
+.upload-params {
+  display: flex;
+  flex-direction: row;
+}
+
 .output {
   flex: 4;
   width: 100%;
@@ -36,10 +42,17 @@
 @media only screen and (max-width: 900px) {
   .audio {
     flex-direction: column;
-    margin-top: 15%;
-    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
   }
   .output {
     height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .audio {
+    margin-top: 7.5%;
+    margin-bottom: 0%;
   }
 }
