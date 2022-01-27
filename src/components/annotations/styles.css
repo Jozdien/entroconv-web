@@ -1,0 +1,87 @@
+.annotations-container {
+  flex: 4;
+  width: 100%;
+  background-color: #F0F0F0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.annotations-container::-webkit-scrollbar {
+  display: none;
+}
+
+.wait-screen {
+  align-self: center;
+
+  font-size: 18px;
+}
+
+.wait-screen:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 3000ms infinite;      
+  animation: ellipsis steps(4,end) 3000ms infinite;
+  content: "\2026";
+  width: 0px;
+}
+
+.transcript-container {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 80vh;
+  width: 70%;
+}
+
+.transcript-header {
+  flex: 2;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.transcript-title {
+  display: flex;
+  align-items: center;
+
+  font-size: 28px;
+}
+
+.download-container {
+  flex: 1;
+}
+
+.segments-container {
+  flex: 9;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.segments-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .annotations-container {
+    height: 70vh;
+  }
+  .transcript-container {
+    width: 80%;
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}

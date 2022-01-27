@@ -4,7 +4,7 @@ import './App.css';
 
 import Uploader from './components/uploader/index.js';
 import Parameters from './components/parameters/index.js';
-import Transcript from './components/transcript/index.js';
+import Annotations from './components/annotations/index.js';
 import Player from './components/player/index.js';
 import ParamsModal from './components/paramsModal/index.js';
 
@@ -13,16 +13,7 @@ function App() {
   const [numSpeakers, setNumSpeakers] = React.useState(2);
   const [segLen, setSegLen] = React.useState(150);
   const [senLen, setSenLen] = React.useState(10);
-  const [transcript, setTranscript] = React.useState(
-    [
-      [
-        ['speaker_0', [['eleven twenty seven fifty seven', -6.642832660675049]]], 
-        ['speaker_1', [['october twenty fourth nineteen seventy', -5.9923481941223145]]], 
-      ], 
-      [
-        ['speaker_1', [['october twenty fourth nineteen seventy', -9.285529518127442]]], 
-      ]
-    ]);
+  const [transcript, setTranscript] = React.useState([]);
   const [paramsModalShow, setParamsModalShow] = React.useState(false);
 
   return (
@@ -48,9 +39,7 @@ function App() {
               Tip: Set the number of speakers in the parameters box!
             </div>
          :
-            <div className="output">
-              <Transcript transcript={transcript}/>
-            </div>
+            <Annotations transcript={transcript}/>
         }
       </div>
       <ParamsModal

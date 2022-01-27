@@ -39,27 +39,11 @@
   color: #D0D0D0;
 }
 
-.output {
-  flex: 4;
-  width: 100%;
-  background-color: #F0F0F0;
-
-  display: flex;
-  justify-content: center;
-}
-
-.output::-webkit-scrollbar {
-  display: none;
-}
-
 @media only screen and (max-width: 900px) {
   .audio {
     flex-direction: column;
     margin-top: 10%;
     margin-bottom: 5%;
-  }
-  .output {
-    height: 70vh;
   }
 }
 
