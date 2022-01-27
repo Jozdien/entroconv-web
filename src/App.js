@@ -30,7 +30,7 @@ function App() {
             <Uploader modalShow={setUploadModalShow}/>
           </div>
           {
-            file == null ? null : <Player audio={file} id={0}/>
+            file == null || fileType != "audio" ? null : <Player audio={file} id={0}/>
           }
         </div>
         {
