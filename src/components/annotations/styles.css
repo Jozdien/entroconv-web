@@ -27,6 +27,43 @@
   width: 0px;
 }
 
+.essay-container {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 80vh;
+  width: 70%;
+}
+
+.essay-header {
+  flex: 2;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.essay-title {
+  display: flex;
+  align-items: center;
+
+  font-size: 28px;
+}
+
+.essay-sentence-container {
+  flex: 9;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.essay-sentence-container::-webkit-scrollbar {
+  display: none;
+}
+
 .transcript-container {
   display: flex;
   flex-direction: column;
