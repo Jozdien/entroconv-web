@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/entroconv-web/static/css/main.3050047f.css",
-    "main.js": "/entroconv-web/static/js/main.12b6c3be.js",
+    "main.css": "/entroconv-web/static/css/main.d47c153a.css",
+    "main.js": "/entroconv-web/static/js/main.cc61d8bb.js",
     "static/js/787.c8718a87.chunk.js": "/entroconv-web/static/js/787.c8718a87.chunk.js",
     "index.html": "/entroconv-web/index.html",
-    "main.3050047f.css.map": "/entroconv-web/static/css/main.3050047f.css.map",
-    "main.12b6c3be.js.map": "/entroconv-web/static/js/main.12b6c3be.js.map",
+    "main.d47c153a.css.map": "/entroconv-web/static/css/main.d47c153a.css.map",
+    "main.cc61d8bb.js.map": "/entroconv-web/static/js/main.cc61d8bb.js.map",
     "787.c8718a87.chunk.js.map": "/entroconv-web/static/js/787.c8718a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3050047f.css",
-    "static/js/main.12b6c3be.js"
+    "static/css/main.d47c153a.css",
+    "static/js/main.cc61d8bb.js"
   ]
 }
