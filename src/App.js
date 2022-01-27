@@ -15,20 +15,17 @@ function App() {
   const [senLen, setSenLen] = React.useState(10);
   const [fileType, setFileType] = React.useState("audio");
   const [annotations, setAnnotations] = React.useState([]);
+  const [waitText, setWaitText] = React.useState("Processing");
   const [uploadModalShow, setUploadModalShow] = React.useState(false);
 
   return (
     <div className="main">
       <div className="body">
         {
-          file == null ? 
-            <div className="buffer"/>
-          : null
+          file == null ? <div className="buffer"/> : null
         }
         <div className="audio">
-          <div className="upload-params">
-            <Uploader modalShow={setUploadModalShow}/>
-          </div>
+          <Uploader modalShow={setUploadModalShow}/>
           {
             file == null || fileType != "audio" ? null : <Player audio={file} id={0}/>
           }

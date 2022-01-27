@@ -17,43 +17,30 @@ function Annotations(props) {
 
 
   return(
-    <div className="annotations-container">
+    <div className="annotations-container-outer">
       {
         annotations.length == 0 ?
           <div className="wait-screen">
             Processing
           </div>
         :
-          props.fileType == "essay" ?
-            <div className="essay-container">
-              <div className="essay-header">
-                <div className="essay-title">
-                  Annotated Transcript
-                </div>
+          <div className="annotations-container-inner">
+            <div className="annotations-header">
+              <div className="annotations-title">
+                Annotated Transcript
               </div>
-              <div className="essay-sentence-container">
-                {
-                  annotations.map((item, index) => 
+            </div>
+            <div className="annotations-segments">
+              {
+                annotations.map((item, index) => 
+                  props.fileType == "essay" ?
                     <EssaySentence text={item[0]} entropy={item[1]} key={index}/>
-                  )
-                }
-              </div>
-            </div>
-          :
-            <div className="transcript-container">
-              <div className="transcript-header">
-                <div className="transcript-title">
-                  Annotated Transcript
-                </div>
-              </div>
-              <div className="segments-container">
-                {
-                  annotations.map((item, index) => 
+                  :
                     <Segment segment={item} count={index} key={index}/>
-                  )
-                }
-              </div>
+                )
+              }
             </div>
+          </div>
       }
     </div>
   );
