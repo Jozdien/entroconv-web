@@ -92,7 +92,7 @@ function UploadModal(props) {
             : null
           }
           {
-            props.filetype == "audio" || props.filetype == "transcript" ?
+            props.filetype == "audio" ?
               <Form.Group controlId="senLen">
                 <Form.Label>Number of words to average entropy over</Form.Label>
                 <Form.Control 
@@ -114,7 +114,7 @@ function UploadModal(props) {
             :
               props.filetype == "transcript" ?
                 <Form.Group controlId="fileUpload">
-                  <Form.Label>Upload transcript (File should be lines of the form name: text)</Form.Label>
+                  <Form.Label>Upload transcript (File should be lines of the form name: text, with text having proper sentences)</Form.Label>
                   <Form.Control type="file" accept=".txt" onChange={(e) => props.setfile(e.target.files[0])}/>
                 </Form.Group>
               :
