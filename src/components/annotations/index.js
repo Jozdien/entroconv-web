@@ -20,9 +20,14 @@ function Annotations(props) {
     <div className="annotations-container-outer">
       {
         annotations.length == 0 ?
-          <div className="wait-screen">
-            Processing
-          </div>
+          props.showWait ? 
+            <div className="wait-screen">
+              Processing
+            </div>
+          :
+            <div className="error-screen">
+              {props.errorText}
+            </div>
         :
           <div className="annotations-container-inner">
             <div className="annotations-header">

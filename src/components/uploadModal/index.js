@@ -7,6 +7,12 @@ import Button from './../button/index.js';
 const axios = require('axios').default;
 
 function UploadModal(props) {
+  const handleChangeType = (event) => {
+    props.setfile(null);
+    props.setAnnotations([]);
+    props.setfiletype(event.target.value);
+  }
+
   const handleUpload = () => {
     props.onHide();
     props.setAnnotations([]);
@@ -35,7 +41,15 @@ function UploadModal(props) {
       .then((response) => {
         props.setAnnotations(response.data);
       }).catch((error) => {
-        //handle error
+        props.setShowWait(false);
+        if (error.response) {
+          if (error.response.status == "502") {
+            props.setErrorText("Your file is too large.  We're working on fixing this, how about trying a smaller file while we do?");
+          }
+          else {
+            props.setErrorText(`Processing of your file failed with status ${error.response.status} (${error.response.statusText}).`);
+          }
+        }
       });
   }
 
@@ -57,7 +71,7 @@ function UploadModal(props) {
         <Form>
           <Form.Group controlId="fileType">
             <Form.Label>Select type of file to annotate</Form.Label>
-            <Form.Select onChange={(e) => props.setfiletype(e.target.value)}>
+            <Form.Select onChange={(e) => handleChangeType(e)}>
               <option value="audio">Audio</option>
               <option value="transcript">Transcript</option>
               <option value="essay">Essay</option>
@@ -126,7 +140,7 @@ function UploadModal(props) {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button type={"modal"} text={"OK"} onClick={handleUpload}/>
+        <Button type={"modal"} text={"Go"} onClick={handleUpload}/>
       </Modal.Footer>
     </Modal>
   );

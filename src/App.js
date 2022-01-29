@@ -15,7 +15,8 @@ function App() {
   const [senLen, setSenLen] = React.useState(10);
   const [fileType, setFileType] = React.useState("audio");
   const [annotations, setAnnotations] = React.useState([]);
-  const [waitText, setWaitText] = React.useState("Processing");
+  const [showWait, setShowWait] = React.useState(true);
+  const [errorText, setErrorText] = React.useState("Something went wrong.  Try again or with a different file.");
   const [uploadModalShow, setUploadModalShow] = React.useState(false);
 
   return (
@@ -36,7 +37,7 @@ function App() {
               Make sure you set the parameters right!
             </div>
          :
-            <Annotations fileType={fileType} annotations={annotations}/>
+            <Annotations fileType={fileType} annotations={annotations} showWait={showWait} errorText={errorText}/>
         }
       </div>
       <UploadModal
@@ -52,6 +53,8 @@ function App() {
         filetype={fileType}
         file={file}
         setAnnotations={setAnnotations}
+        setShowWait={setShowWait}
+        setErrorText={setErrorText}
         onHide={() => setUploadModalShow(false)}
       />
     </div>
