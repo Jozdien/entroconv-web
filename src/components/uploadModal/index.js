@@ -16,6 +16,7 @@ function UploadModal(props) {
   const handleUpload = () => {
     props.onHide();
     props.setAnnotations([]);
+    props.setShowWait(true);
 
     var file = props.file;
 
